@@ -44,7 +44,7 @@
     "args": [
       "-i",
       "-c",
-      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug\""
+      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target AppTarget\""
     ],
     "cwd": "$ZED_WORKTREE_ROOT",
     "tags": ["configure", "build"]
@@ -55,7 +55,7 @@
     "args": [
       "-i",
       "-c",
-      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug\""
+      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target AppTestTarget\""
     ],
     "cwd": "$ZED_WORKTREE_ROOT",
     "tags": ["configure", "build"]
