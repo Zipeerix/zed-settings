@@ -26,8 +26,12 @@
   {
     "label": "CMake: Configure",
     "reveal": "always",
-    "command": "cmake",
-    "args": ["-DCMAKE_EXPORT_COMPILE_COMMANDS=ON", "--preset", "conan-debug"],
+    "command": "zsh",
+    "args": [
+      "-i",
+      "-c",
+      "\". build/Debug/generators/conanbuild.sh && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug\""
+    ],
     "cwd": "$ZED_WORKTREE_ROOT",
     "tags": ["configure"]
   },
@@ -38,7 +42,7 @@
     "args": [
       "-i",
       "-c",
-      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target <MAIN TARGET HERE>\""
+      "\". build/Debug/generators/conanbuild.sh && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target <MAIN TARGET HERE>\""
     ],
     "cwd": "$ZED_WORKTREE_ROOT",
     "tags": ["configure", "build"]
@@ -50,7 +54,7 @@
     "args": [
       "-i",
       "-c",
-      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target <TEST TARGET HERE>\""
+      "\". build/Debug/generators/conanbuild.sh && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target <TEST TARGET HERE>\""
     ],
     "cwd": "$ZED_WORKTREE_ROOT",
     "tags": ["configure", "build"]
