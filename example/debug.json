@@ -6,11 +6,11 @@
         "args": [
         "-i",
         "-c",
-        "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target AppTarget\""
+        "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug --target <MAIN TARGET HERE>\""
         ],
         "cwd": "$ZED_WORKTREE_ROOT"
     },
-    "program": "$ZED_WORKTREE_ROOT/build/Debug/App",
+    "program": "$ZED_WORKTREE_ROOT/build/Debug/<APP NAME HERE>",
     "request": "launch",
     "adapter": "CodeLLDB"
   }
