@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 100
+    }
+  },
+  "languages": {
+    "C++": {
+      "language_servers": ["clangd"],
+      "format_on_save": "on"
+    }
+  },
   "inlay_hints": {
     "enabled": true,
     "show_type_hints": true,
