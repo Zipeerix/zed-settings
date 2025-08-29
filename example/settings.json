@@ -1,0 +1,25 @@
+{
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 100
+    }
+  },
+  "languages": {
+    "C++": {
+      "language_servers": ["clangd"],
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "clangd",
+        "arguments": ["-compile-commands-dir=build/Debug"]
+      },
+      "initialization_options": {
+        "clang-tidy": true,
+        "completion-style": "detailed"
+      }
+    }
+  }
+}

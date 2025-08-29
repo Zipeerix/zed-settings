@@ -1,0 +1,13 @@
+[
+  {
+    "label": "Debug",
+    "build": {
+      "command": "cmake",
+      "args": ["--build", "--preset", "conan-debug"],
+      "cwd": "$ZED_WORKTREE_ROOT"
+    },
+    "program": "$ZED_WORKTREE_ROOT/build/Debug/App",
+    "request": "launch",
+    "adapter": "CodeLLDB"
+  }
+]

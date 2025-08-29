@@ -1,0 +1,63 @@
+[
+  /*{
+    "label": "Prepare Project",
+    "command": "ln",
+    "args": [
+      "-s",
+      "$ZED_WORKTREE_ROOT/build/Debug/compile_commands.json",
+      "compile_commands.json"
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["clean"]
+  },*/
+  {
+    "label": "Conan: Install",
+    "command": "conan",
+    "args": ["install", ".", "-s", "'&:build_type=Debug'", "--build=missing"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["clean"]
+  },
+  {
+    "label": "Conan: Create",
+    "command": "conan",
+    "args": ["create", "."],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["clean"]
+  },
+  {
+    "label": "CMake & Conan: Clean",
+    "command": "rm",
+    "args": ["-rf", "build"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["clean"]
+  },
+  {
+    "label": "CMake: Configure",
+    "command": "cmake",
+    "args": ["-DCMAKE_EXPORT_COMPILE_COMMANDS=ON", "--preset", "conan-debug"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["configure"]
+  },
+  {
+    "label": "CMake: Configure and Build (Application)",
+    "command": "zsh",
+    "args": [
+      "-i",
+      "-c",
+      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug\""
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["configure", "build"]
+  },
+  {
+    "label": "CMake: Configure and Build (Tests)",
+    "command": "zsh",
+    "args": [
+      "-i",
+      "-c",
+      "\"cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug\""
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["configure", "build"]
+  }
+]

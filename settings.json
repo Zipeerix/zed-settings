@@ -1,0 +1,53 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "git_panel": {
+    "fallback_branch_name": "master"
+  },
+  "project_panel": {
+    "indent_size": 15
+  },
+  "title_bar": {
+    "show_branch_icon": true
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "icon_theme": "VSCode Icons (Dark)",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors"
+  },
+  "hour_format": "hour24",
+  "vim_mode": false,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "VSCode Dark Modern"
+  },
+  "terminal": {
+    "shell": {
+      "program": "/bin/zsh"
+    },
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    }
+  }
+}
