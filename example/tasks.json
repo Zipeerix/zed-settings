@@ -58,5 +58,17 @@
     ],
     "cwd": "$ZED_WORKTREE_ROOT",
     "tags": ["configure", "build"]
+  },
+    {
+    "label": "CMake: Configure and Build (All)",
+    "reveal": "always",
+    "command": "zsh",
+    "args": [
+      "-i",
+      "-c",
+      "\". build/Debug/generators/conanbuild.sh && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --preset conan-debug && cmake --build --preset conan-debug\""
+    ],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "tags": ["configure", "build"]
   }
 ]
