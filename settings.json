@@ -9,7 +9,7 @@
 {
   "diagnostics": {
     "inline": {
-      "enabled": false
+      "enabled": true
     }
   },
   "active_pane_modifiers": {
