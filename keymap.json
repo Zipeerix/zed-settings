@@ -1,0 +1,29 @@
+[
+  {
+    "bindings": {
+      "cmd-r": "task::Spawn"
+    }
+  },
+  {
+    "context": "(Editor && mode == full)",
+    "bindings": {
+      "cmd-shift-r": [
+        "buffer_search::Deploy",
+        {
+          "replace_enabled": true
+        }
+      ]
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-shift-f": null
+    }
+  },
+  {
+    "bindings": {
+      "cmd-h": "editor::SwitchSourceHeader"
+    }
+  }
+]
