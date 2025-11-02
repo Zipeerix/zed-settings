@@ -1,7 +1,14 @@
 {
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3.5-sonnet"
+    },
+    "model_parameters": []
+  },
   "diagnostics": {
     "inline": {
-      "enabled": true
+      "enabled": false
     }
   },
   "active_pane_modifiers": {
@@ -18,10 +25,10 @@
     }
   },
   "current_line_highlight": "line",
-  "ui_font_family": ".ZedSans",
+  "ui_font_family": ".ZedMono",
   "buffer_line_height": "comfortable",
   "buffer_font_family": ".ZedMono",
-  "bottom_dock_layout": "contained",
+  "bottom_dock_layout": "full",
   "debugger": {
     "dock": "bottom"
   },
@@ -73,8 +80,8 @@
   "hour_format": "hour24",
   "vim_mode": false,
   "base_keymap": "JetBrains",
-  "ui_font_size": 16.0,
-  "buffer_font_size": 14.0,
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15.0,
   "theme": {
     "mode": "system",
     "light": "Gruvbox Light Hard",
